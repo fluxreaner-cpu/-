@@ -61,18 +61,15 @@ jobs:
       - name: Build web game
         run: npm run build
 
-      - name: Create Capacitor config
+      - name: Create Capacitor JSON config
         run: |
-          cat > capacitor.config.ts <<'EOF'
-          import type { CapacitorConfig } from '@capacitor/cli';
-
-          const config: CapacitorConfig = {
-            appId: 'com.pixelforest.survivor',
-            appName: 'Pixel Forest Survivor',
-            webDir: 'dist'
-          };
-
-          export default config;
+          rm -f capacitor.config.ts capacitor.config.js
+          cat > capacitor.config.json <<'EOF'
+          {
+            "appId": "com.pixelforest.survivor",
+            "appName": "Pixel Forest Survivor",
+            "webDir": "dist"
+          }
           EOF
 
       - name: Add Android platform
@@ -94,3 +91,4 @@ jobs:
           path: android/app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
           retention-days: 7
+          
