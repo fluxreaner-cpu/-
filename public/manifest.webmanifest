@@ -1,0 +1,17 @@
+{
+  "name": "Тёмная Чаща",
+  "short_name": "Тёмная Чаща",
+  "description": "2D пиксельный зомби-шутер в живом лесу с 16 биомами, прокачкой арсенала и боссами.",
+  "start_url": "/",
+  "display": "fullscreen",
+  "background_color": "#090e0c",
+  "theme_color": "#090e0c",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
